@@ -1,0 +1,32 @@
+--------------------stats--------------------------
+Current Time: 2024-02-16 15:33:06
+Name: EC24 n^{1/4} PIR (QuaterPIR)
+DB n: 67108864
+DB entry size (Bytes): 16
+DB size (GB): 1
+Prep. Time (min): 5.0574
+Am. Prep. Time (ms): 2.055380196973597
+Prep. Comm. (GB): 1
+Am. Prep. Comm. (KB): 7.102537355893629
+Avg. Online Time (ms): 14.144410820000001
+Online Comm. (KB): 2
+Storage (MB): 76.0152587890625
+---------------------------------------------------
+
+
+--------------------stats--------------------------
+Current Time: 2024-02-16 15:37:58
+Name: Piano
+DB n: 67108864
+DB entry size (Bytes): 16
+DB size (GB): 1
+Prep. Time (min): 3.5145
+Am. Prep. Time (ms): 1.4283295175907988
+Prep. Comm. (GB): 1
+Am. Prep. Comm. (KB): 7.102537355893629
+Avg. Online Time (ms): 4.989613829
+Online Comm. (KB): 32.015625
+Storage (MB): 46.625
+---------------------------------------------------
+
+
