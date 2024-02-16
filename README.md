@@ -11,6 +11,8 @@ QuaterPIR is the optimized single-server PIR scheme described in the Appendix B,
 1. Install Go(https://go.dev/doc/install). We use the version of Go 1.19.
 2. For developing, please install gRPC(https://grpc.io/docs/languages/go/quickstart/)
 
+We have tested the code on macOS (Sonama 14.3, x86_64) and Linux (RedHat 7.9 x86_64, Ubuntu 20.04 x86_64). 
+
 ### Running Experiments:
 0. First run `go mod tidy` to download the dependency.
 1. In one terminal, `go run server/server.go -port 50051`. This sets up the server. The server will store the whole DB in the RAM, so please ensure there's enough memory.
