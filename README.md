@@ -15,7 +15,7 @@ QuaterPIR is the optimized single-server PIR scheme described in the Appendix B,
 0. First run `go mod tidy` to download the dependency.
 1. In one terminal, `go run server/server.go -port 50051`. This sets up the server. The server will store the whole DB in the RAM, so please ensure there's enough memory.
 2. In another terminal, `go run ec24/ec24_client.go -ip localhost:50051 -thread 8`. This runs the PIR experiment with one setup phase for a window of $\sqrt{n}\ln(n)$-queries and follows with the online phase of up to 1000 queries. The ip flag denotes the server's address. The thread denotes how many threads are used in the setup phase. The 1GB experiment typically runs for a few minutes. The 64GB and the 100GB experiments run for no more than 2 hours on an AWS m5.8xlarge instance. (Tips: if you just want to see the performance, you can run it with flag `--ignoreOffline`. This will skip the long preprocessing phase and run the online phase assuming all the hints are zero.)
-3. View the results in `output.txt`.
+3. View the results in `output.txt`. You can terminate the server process.
 4. You can run the Piano PIR scheme to see the comparison: `go run client_new/client_new.go -ip localhost:50051 -thread 8`. The results will still be in `output.txt`.
 
 #### Different DB configuration:
