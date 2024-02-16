@@ -20,15 +20,18 @@ We have tested the code on macOS (Sonama 14.3, x86_64) and Linux (RedHat 7.9 x86
 3. View the results in `output.txt`. You can terminate the server process.
 4. You can run the Piano PIR scheme to see the comparison: `go run client_new/client_new.go -ip localhost:50051 -thread 8`. The results will still be in `output.txt`.
 
+The client process will verify the correctness of every query it makes and panic if an error is detected. 
+We do so by sharing the `DBSeed` with the client process. Whenever the client finishes one query, it uses the seed to generate the ground truth and compares it to the query answer. The client will not use the seed anywhere else.
+
 #### Different DB configuration:
-1. The first two integers in `config.txt` denote `N` and `DBSeed`. `N` denotes the number of entries in the database. `DBSeed` denotes the random seed to generate the DB. The client will use the seed only for verifying the correctness. The code only reads the integers in the first line. You can change it according to your need.
+1. The first two integers in `config.txt` denote `N` and `DBSeed`. `N` denotes the number of entries in the database. `DBSeed` denotes the random seed to generate the DB. The client will use the seed only for verifying the correctness. The code only reads the integers in the first line. You can change it according to your needs.
 2. In `util/util.go`, you can change the `DBEntrySize` constant to change the entry size, e.g. 8bytes, 32bytes, 256bytes.
 
 ### Developing
 1. The server implementation is in `server/server.go`.
 2. The client implementation is in `ec24/ec24_client.go`.
 3. Common utilities are in `util/util.go`, including the PRF and the `DBEntry` definition.
-4. The messages exchanged by servers and client are defined in `query/query.proto`. If you change it, run `bash proto.sh` to generate the corresponding server and client API. You should implement those API later.
+4. The messages exchanged by the server and client are defined in `query/query.proto`. If you change it, run `bash proto.sh` to generate the corresponding server and client API. You should implement those API later.
 
 ### Contact
 Mingxun Zhou(mingxunz@andrew.cmu.edu)
