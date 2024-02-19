@@ -1,7 +1,7 @@
-# Efficient Pre-processing PIR Without Public-Key Cryptography (QuaterPIR)
-This is a prototype implementation of the QuaterPIR, a private information retrieval(PIR) algorithm that allows a client to access a database without the server knowing the querying index.
+# Efficient Pre-processing PIR Without Public-Key Cryptography (QuarterPIR)
+This is a prototype implementation of the QuarterPIR, a private information retrieval(PIR) algorithm that allows a client to access a database without the server knowing the querying index.
 The algorithm details can be found in the paper (https://eprint.iacr.org/2023/1574).
-QuaterPIR is the optimized single-server PIR scheme described in the Appendix B, which has $O_\lambda(n^{1/4})$ online communication and $O(\sqrt{n})$ computation per query.
+QuarterPIR is the optimized single-server PIR scheme described in the Appendix B, which has $O_\lambda(n^{1/4})$ online communication and $O(\sqrt{n})$ computation per query.
 
 **Note**: This repo also includes the original Piano PIR (IEEE S&P 24) implementation (https://eprint.iacr.org/2023/452).
 
