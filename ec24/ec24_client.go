@@ -1184,7 +1184,7 @@ func runPIRWithOneServerEC24(leftClient pb.QueryServiceClient, DBSize uint64, DB
 	str := fmt.Sprintf("Current Time: %v\n", time.Now().Format("2006-01-02 15:04:05"))
 	LogFile.WriteString(str)
 
-	LogFile.WriteString("Name: EC24 n^{1/4} PIR (QuaterPIR)\n")
+	LogFile.WriteString("Name: EC24 n^{1/4} PIR (QuarterPIR)\n")
 
 	str = fmt.Sprintf("DB n: %v\n", DBSize)
 	LogFile.WriteString(str)
