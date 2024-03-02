@@ -1036,7 +1036,7 @@ func main() {
 	log.Printf("Server address %v, thread number %v ignoreOffline %v", serverAddr, threadNum, ignoreOffline)
 
 	DBSize, DBSeed = ReadConfigInfo()
-	ChunkSize, SetSize = util.GenParams(DBSize)
+	ChunkSize, SetSize, _, _ = util.GenParams(DBSize)
 
 	maxMsgSize := 12 * 1024 * 1024
 
